@@ -7,6 +7,8 @@ namespace Intro_to_oop
     {
         static void Main(string[] args)
         {
+            //Cat Class
+
             Cat firstCat = new Cat();
             firstCat.Name = "Mr.Fuzzy";
 
@@ -19,6 +21,17 @@ namespace Intro_to_oop
 
             secondCat.Meow();
 
+            firstCat.HairLength = "nice and short";
+            secondCat.HairLength = "too long";
+
+            Console.WriteLine(firstCat.Hairball());
+            Console.WriteLine(secondCat.Hairball());
+
+            Cat thirdCat = new Cat(1, true);
+
+
+            //Dog Class
+
             Dog secondDog = new Dog("long", 3.5, 25, 10.5);
 
             secondDog.Run();
@@ -29,14 +42,33 @@ namespace Intro_to_oop
 
             secondDog.Weight();
 
-            firstCat.HairLength = "nice and short";
-            secondCat.HairLength = "too long";
+            //SuperHero Class
 
-            Console.WriteLine(firstCat.Hairball());
-            Console.WriteLine(secondCat.Hairball());
+            SuperHero firstHero = new SuperHero("Superman", true, "Male", "Faster than a locomotive", "kryptonite");
+                        
+            SuperHero secondHero = new SuperHero("Wonderwoman", true, "Female", "deflecting bullets", "pasta" );
 
-            Cat thirdCat = new Cat(1, true);
-            
+            Console.WriteLine();
+            Console.WriteLine();
+
+            firstHero.Health();
+            secondHero.Health();
+
+
+            //firstCat.HairLength = "nice and short";
+            //secondCat.HairLength = "too long";
+
+            //Console.WriteLine(firstCat.Hairball());
+            //Console.WriteLine(secondCat.Hairball());
+
+            firstHero.HasCape = true;
+            secondHero.HasCape = false;
+
+
+            Console.WriteLine(firstHero.NeedEnergyBoost());
+            Console.WriteLine(secondHero.NeedEnergyBoost());
+
+
         }
     }
 }
